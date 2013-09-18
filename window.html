@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Benzinrechner</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="rechner.js"></script>
+</head>
+<body>
+<table style="text-align: left; width: 640px;" border="0"
+       cellpadding="2" cellspacing="2">
+    <tbody>
+    <tr>
+        <td style="vertical-align: top; width: 464px;">Preis in €<br>
+        </td>
+        <td style="vertical-align: top; width: 156px;"><input id="price"></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; width: 464px;">Strecke
+            Zurück gelegt (seit letztem Tanken)<br>
+        </td>
+        <td style="vertical-align: top; width: 156px;"><input
+                id="strecke"></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; width: 464px;">größe
+            tank<br>
+        </td>
+        <td style="vertical-align: top; width: 156px;"><input
+                id="tank-size"></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; width: 464px;">menge nachgetankt<br>
+        </td>
+        <td style="vertical-align: top; width: 156px;"><input
+                id="tank-menge"></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">strecke pro tag<br>
+        </td>
+        <td style="vertical-align: top;"><input id="daily"></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<table style="text-align: left; width: 640px;" border="0"
+       cellpadding="2" cellspacing="2">
+    <tbody>
+    <tr>
+        <td style="vertical-align: top; width: 463px;">Kosten aktuelle
+            Tankfüllung<br>
+        </td>
+        <td style="vertical-align: top; width: 157px;"><span id="t-kosten"><br>
+      </span></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; width: 463px;">Kosten pro fahrt<br>
+        </td>
+        <td style="vertical-align: top; width: 157px;"><span id="f-kosten"><br>
+      </span></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; width: 463px;">Benzin verbrauch
+            auf 100 km<br>
+        </td>
+        <td style="vertical-align: top; width: 157px;"><span
+                id="verbrauch"><br>
+      </span></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; width: 463px;">Benzin verbrauch
+            pro Fahrt<br>
+        </td>
+        <td style="vertical-align: top; width: 157px;"><span
+                id="verbrauch-daily"><br>
+      </span></td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top; width: 463px;">Tage bis zum
+            nächsten Tanken ( geschätzt; i.d.R weniger)<br>
+        </td>
+        <td style="vertical-align: top; width: 157px;"><span id="fahrten"><br>
+      </span></td>
+    </tr>
+    </tbody>
+</table>
+<button id="btn-submit">Berechnen</button>
+</body>
+</html>

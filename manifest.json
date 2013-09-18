@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Benzinrechner",
+    "description": "Ein einfacher Benzinrechner.",
+    "version": "1.0",
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "icons": { "16": "icon_16.png","48": "icon_48.png", "128": "icon_128.png" }
+}
