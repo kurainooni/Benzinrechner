@@ -28,6 +28,10 @@ local.properties
 # PDT-specific
 .buildpath
 
+
+#################
+## Intelli J IDE
+#################
 .idea/*
 
 #################
@@ -214,3 +218,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#GIT
+.gitignore
+.gitattributes
