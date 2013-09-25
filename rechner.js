@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function preis_Fuellung(price, menge){
-    return price*menge;
+    return (price*menge);
 }
 
 function preis_per_Fahrt(verbrauch_daily, price){
@@ -31,16 +31,16 @@ function fahrt_menge(verbrauch_daily,tank_size){
 }
 
 function calculate(){
-    var price = $("#price").val();
-    var strecke = $("#strecke").val();
-    var tank_size = $("#tank-size").val();
-    var tank_menge = $("#tank-menge").val();
-    var daily = $("#daily").val();
-    $("#t-kosten").text(preis_Fuellung(price,tank_menge)+"€");
+    var price = parseFloat($("#price").val().replace(",","."));
+    var strecke = parseFloat($("#strecke").val().replace(",","."));
+    var tank_size = parseFloat($("#tank-size").val().replace(",","."));
+    var tank_menge = parseFloat($("#tank-menge").val().replace(",","."));
+    var daily = parseFloat($("#daily").val().replace(",","."));
+    $("#t-kosten").text(preis_Fuellung(price,tank_menge).toFixed(2).toString().replace(".",",")+"€");
     var g_verbrauch = verbrauch(tank_menge,strecke);
-    $("#verbrauch").text(g_verbrauch + " l / 100 km");
+    $("#verbrauch").text(g_verbrauch.toFixed(2).toString().replace(".",",") + " l / 100 km");
     var verbrauch_daily = verbrauch_Taeglich(g_verbrauch,daily);
-    $("#verbrauch-daily").text("ca. " + verbrauch_daily + " l");
-    $("#f-kosten").text("ca. " + preis_per_Fahrt(verbrauch_daily,price) + " €");
-    $("#fahrten").text("ca. " + fahrt_menge(verbrauch_daily,tank_size) + " Tag/e");
+    $("#verbrauch-daily").text("ca. " + verbrauch_daily.toFixed(2).toString().replace(".",",") + " l");
+    $("#f-kosten").text("ca. " + preis_per_Fahrt(verbrauch_daily,price).toFixed(2).toString().replace(".",",") + " €");
+    $("#fahrten").text("ca. " + fahrt_menge(verbrauch_daily,tank_size).toFixed(2).toString().replace(".",",") + " Tag/e");
 }
