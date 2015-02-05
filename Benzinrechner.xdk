@@ -1,0 +1,244 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.1",
+    "creationData": {
+      "type": "import",
+      "src": "",
+      "projectGuid": "01399e56-ad83-422f-9929-3418101e7a4c",
+      "lastModifiedDate": 1414408384297,
+      "creationDate": 1405588053868
+    },
+    "sourceDirectory": "",
+    "startFile": "index.html",
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [
+      {
+        "name": "Cordova",
+        "version": "2.9.0",
+        "data": {
+          "default": true
+        }
+      },
+      {
+        "name": "intelXDK",
+        "version": "4.0.0",
+        "data": {
+          "default": true
+        }
+      }
+    ],
+    "serviceMethods": [],
+    "cordovaPluginsDirectory": "plugins",
+    "cordovaPlugins": [
+      {
+        "id": "intel.xdk.accelerometer",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.audio",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.base",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.cache",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.camera",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.contacts",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.device",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.display",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.facebook",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.file",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.geolocation",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.notification",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.player",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      }
+    ],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "Fullscreen": true,
+          "android-minSdkVersion": "8",
+          "android-targetSdkVersion": "21"
+        },
+        "isActive_": true,
+        "appName_": "Benzinrechner",
+        "appID_": "com.krusch.benzinrechner",
+        "appAccess_": "*",
+        "icons_": [
+          {
+            "relPath": "icon_ldpi.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "icon_mdpi.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "icon_hdpi.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "icon_xhdpi.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.2",
+        "appDescription_": "Ein einfacher Benzinrechner",
+        "appAuthor_": "Florian Krusch",
+        "appVersionCode_": "1"
+      },
+      "Android-Crosswalk": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android-Crosswalk",
+        "preferences_": {
+          "android-minSdkVersion": "8",
+          "android-targetSdkVersion": "21"
+        },
+        "isActive_": true,
+        "appName_": "Benzinrechner",
+        "appID_": "com.krusch.benzinrechner",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.2",
+        "appVersionCode_": "1",
+        "appDescription_": "Ein einfacher Benzinrechner",
+        "appAuthor_": "Florian Krusch"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "Benzinrechner",
+        "appID_": "not.yet.specified",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0"
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "Benzinrechner",
+        "appID_": "not.yet.specified",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0.0"
+      },
+      "WindowsPhone8": {
+        "platform_": "wp8",
+        "runtime_": "Cordova 3.x",
+        "name_": "WindowsPhone8",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "Benzinrechner",
+        "appID_": "not.yet.specified",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0.0"
+      }
+    }
+  }
+}
