@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
 //    });
 });
 
+
+
 var distFact = 1;
 
 var distType = "km";
@@ -61,20 +63,20 @@ function calculate(){
     var inDist = $('input[name="rad-in-unit"]:checked').val();
     var outDist = $('input[name="rad-out-unit"]:checked').val();
 
-    if (inDist!=outDist){
-        if(inDist==0){
-            distFact=0.62137;
-        }
-        else if (inDist==1){
-            distFact=1.609344;
-        }
-        else{
-            distFact=1;
-        }
-    }
-    else{
-        distFact=1;
-    }
+    //if (inDist!=outDist){
+    //    if(inDist==0){
+    //        distFact=0.62137;
+    //    }
+    //    else if (inDist==1){
+    //        distFact=1.609344;
+    //    }
+    //    else{
+    //        distFact=1;
+    //    }
+    //}
+    //else{
+    //    distFact=1;
+    //}
 
 
 

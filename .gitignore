@@ -213,3 +213,12 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#############
+## Intel XDK
+#############
+
+*.xdk
+*.xdke
+*.xdk10_bak
+intelxdk.config.*
