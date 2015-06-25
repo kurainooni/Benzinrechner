@@ -38,11 +38,12 @@
 </head>
 <body style="background-color: black;">
 <div style="width: 100%;" data-theme="b" data-role="page">
-    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-        <a href="index.html" data-ajax="false"><i class='fa fa-bars'></i></a>
+    <div data-role="header" data-position="fixed" data-tap-toggle="true" data-theme='b'>
+        <a href="#settingsPane" data-role="button" data-inline="true"><i class='fa fa-bars'></i></a>
 
         <h1>Benzinrechner</h1>
     </div>
+
     <table style="text-align: left;" border="0" cellpadding="2" cellspacing="2" width="100%">
         <tbody>
         <tr>
@@ -74,20 +75,7 @@
         </tbody>
     </table>
     <br>
-<!--    Eingabe in :
-    <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
-        <input type="radio" name="rad-in-unit" id="rad-in-unit-0" value="0" checked><label
-            for="rad-in-unit-0">KM</label>
-        <input type="radio" name="rad-in-unit" id="rad-in-unit-1" value="1"><label for="rad-in-unit-1">Meilen</label>
-    </fieldset>
-    <br>
-    Ausgabe in :
-    <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
-        <input type="radio" name="rad-out-unit" id="rad-out-unit-0" value="0" checked><label
-            for="rad-out-unit-0">KM</label>
-        <input type="radio" name="rad-out-unit" id="rad-out-unit-1" value="1"><label for="rad-out-unit-1">Meilen</label>
-    </fieldset>
-    <br>-->
+
     <table style="text-align: left;" border="0" cellpadding="2" cellspacing="2" width="100%">
         <tbody>
         <tr>
@@ -135,7 +123,22 @@
             <button data-role="button" style="position: relative;" id="btn-submit">Berechnen</button>
         </div>
     </div>
+    <div id="settingsPane" data-role="panel" data-display="push" data-theme="b">
+        Eingabe in :
+        <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
+            <input type="radio" name="rad-in-unit" id="rad-in-unit-0" value="0" checked><label
+                for="rad-in-unit-0">KM</label>
+            <input type="radio" name="rad-in-unit" id="rad-in-unit-1" value="1"><label for="rad-in-unit-1">Meilen</label>
+        </fieldset>
+        <br>
+        Ausgabe in :
+        <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
+            <input type="radio" name="rad-out-unit" id="rad-out-unit-0" value="0" checked><label
+                for="rad-out-unit-0">KM</label>
+            <input type="radio" name="rad-out-unit" id="rad-out-unit-1" value="1"><label for="rad-out-unit-1">Meilen</label>
+        </fieldset>
+        <br>
+    </div>
 </div>
-
 </body>
 </html>
