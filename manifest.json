@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Benzinrechner",
     "description": "Ein einfacher Benzinrechner.",
-    "version": "1.0",
+    "version": "1.1",
     "app": {
         "background": {
             "scripts": ["background.js"]
