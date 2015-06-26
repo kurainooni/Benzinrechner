@@ -1,6 +1,7 @@
 CACHE MANIFEST
 index.html
 js/nativedroid.script.js
+js/jquery.html5storage.min.js
 css/jquerymobile.nativedroid.css
 css/jquerymobile.nativedroid.light.css
 css/jquerymobile.nativedroid.dark.css
