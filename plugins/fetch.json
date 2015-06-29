@@ -1,0 +1,82 @@
+{
+    "intel.xdk.audio": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-audio.git",
+            "subdir": ".",
+            "ref": "r1.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.cache": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-cache.git",
+            "subdir": ".",
+            "ref": "r1.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.camera": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-camera.git",
+            "subdir": ".",
+            "ref": "r1.2.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.contacts": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-contacts.git",
+            "subdir": ".",
+            "ref": "r1.2.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.device": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-device.git",
+            "subdir": ".",
+            "ref": "r1.2.5"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.facebook": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-facebook.git",
+            "subdir": ".",
+            "ref": "r1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.file": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-file.git",
+            "subdir": ".",
+            "ref": "r1.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.player": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-player.git",
+            "subdir": ".",
+            "ref": "r1.2.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

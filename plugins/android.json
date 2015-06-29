@@ -1,0 +1,19 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "intel.xdk.audio": {},
+        "intel.xdk.cache": {},
+        "intel.xdk.camera": {},
+        "intel.xdk.contacts": {},
+        "intel.xdk.device": {},
+        "intel.xdk.file": {},
+        "intel.xdk.player": {}
+    },
+    "dependent_plugins": {}
+}

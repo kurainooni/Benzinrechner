@@ -222,7 +222,5 @@ pip-log.txt
 ## Intel XDK
 #############
 
-*.xdk
-*.xdke
-*.xdk10_bak
+*.xdk*
 intelxdk.config.*
