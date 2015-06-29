@@ -33,6 +33,19 @@ var distFact = 1;
 
 var distType = "km";
 
+var tank_size = $.localStorage.getItem('tank-size');
+if (tank_size == null) {
+    tank_size = parseFloat($("#tank-size").val().replace(",", "."));
+} else {
+    $("#tank-size").val(tank_size);
+}
+var daily = $.localStorage.getItem('daily');
+if (daily == null) {
+    daily = parseFloat($("#daily").val().replace(",", "."));
+} else {
+    $("#daily").val(daily);
+}
+
 /**
  *
  * @param price
@@ -74,9 +87,9 @@ function km_to_miles(km) {
 function calculate() {
     var price = parseFloat($("#price").val().replace(",", "."));
     var strecke = parseFloat($("#strecke").val().replace(",", "."));
-    var tank_size = parseFloat($("#tank-size").val().replace(",", "."));
+    tank_size = parseFloat($("#tank-size").val().replace(",", "."));
     var tank_menge = parseFloat($("#tank-menge").val().replace(",", "."));
-    var daily = parseFloat($("#daily").val().replace(",", "."));
+    daily = parseFloat($("#daily").val().replace(",", "."));
     inDist = $('input[name="rad-in-unit"]:checked').val();
     outDist = $('input[name="rad-out-unit"]:checked').val();
 
@@ -124,5 +137,10 @@ $(document).ready(function () {
     $('input[name="rad-out-unit"]').on('click', function () {
         $.localStorage.setItem('outDistVal', $('input[name="rad-out-unit"]:checked').val());
     });
-
+    $('input#tank-size').on('change', function () {
+        $.localStorage.setItem('tank-size', $('input#tank-size').val().replace(",", "."));
+    });
+    $('input#daily').on('change', function () {
+        $.localStorage.setItem('daily', $('input#daily').val().replace(",", "."));
+    });
 });
