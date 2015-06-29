@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html manifest="cache.manifest">
+<html manifest="cache_f7.manifest">
 <head>
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Benzinrechner</title>
+
+    <link rel="shortcut icon" sizes="16x16" href="icon_16.png"/>
+    <link rel="shortcut icon" sizes="32x32" href="icon_32.png"/>
     <link rel="shortcut icon" sizes="128x128" href="icon_128.png">
     <link rel="shortcut icon" sizes="192x192" href="icon_xxxhdpi.png">
     <link rel="apple-touch-icon" sizes="57x57" href="icon_57.png">
@@ -19,126 +23,212 @@
     <link rel="apple-touch-icon" sizes="144x144" href="icon_144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="icon_152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="icon_180.png">
-    <!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- jQueryMobileCSS - original without styling -->
-    <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css">
-    <!-- nativeDroid core CSS -->
-    <link rel="stylesheet" href="css/jquerymobile.nativedroid.css">
-    <!-- nativeDroid: Light/Dark -->
-    <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css" id="jQMnDTheme">
-    <!-- nativeDroid: Color Schemes -->
-    <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.blue.css" id="jQMnDColor">
+    <!-- Path to Framework7 Library CSS-->
 
+    <link rel="stylesheet" href="f7/css/framework7.min.css">
+    <link rel="stylesheet" href="css/framework7.keypad.min.css">
+    <link rel="stylesheet" href="f7/css/framework7.themes.min.css">
+    <!-- Path to your custom app styles-->
+
+    <link rel="stylesheet" href="f7/css/my-app.css">
     <!-- jQuery / jQueryMobile Scripts -->
+
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="js/jquery.html5storage.min.js"></script>
-    <script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+
     <script type="text/javascript" src="rechner.js"></script>
 </head>
-<body style="background-color: black;">
-<div style="width: 100%;" data-theme="b" data-role="page">
-    <div data-role="header" data-position="fixed" data-tap-toggle="true" data-theme='b'>
-        <a href="#settingsPane" data-role="button" data-inline="true"><i class='fa fa-bars'></i></a>
+<body><!-- class="layout-dark theme-lightblue"-->
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<div id="settingsPane" class="panel panel-left panel-reveal">
+    <div class="content-block">
+        <div class="list-block">
+            <div class="content-block-title">Eingabe in :</div>
+            <ul>
+                <li>
+                    <label class="label-radio item-content">
+                        <input name="rad-in-unit" id="rad-in-unit-0" value="0" checked="checked" type="radio">
 
-        <h1>Benzinrechner</h1>
-    </div>
+                        <div class="item-inner">
+                            <div class="item-title">
+                                <div class="item-title">KM</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label class="label-radio item-content">
+                        <input name="rad-in-unit" id="rad-in-unit-1" value="1" type="radio">
 
-    <table style="text-align: left;" border="0" cellpadding="2" cellspacing="2" width="100%">
-        <tbody>
-        <tr>
-            <td style="vertical-align: top; width: 70%;">Preis in &euro;<br>
-            </td>
-            <td style="vertical-align: top; width: 30%;"><input id="price"></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top; width: 70%;">menge nachgetankt<br>
-            </td>
-            <td style="vertical-align: top; width: 30%;"><input id="tank-menge"></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top; width: 70%;">größe tank<br>
-            </td>
-            <td style="vertical-align: top; width: 30%;"><input id="tank-size"></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top; width: 70%;">Strecke
-                Zurück gelegt (seit letztem Tanken)<br>
-            </td>
-            <td style="vertical-align: top; width: 30%;"><input id="strecke"></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top;">strecke pro tag<br>
-            </td>
-            <td style="vertical-align: top;"><input id="daily"></td>
-        </tr>
-        </tbody>
-    </table>
-    <br>
-
-    <table style="text-align: left;" border="0" cellpadding="2" cellspacing="2" width="100%">
-        <tbody>
-        <tr>
-            <td style="vertical-align: top; width: 463px;">Kosten aktuelle
-                Tankfüllung<br>
-            </td>
-            <td style="vertical-align: top; width: 157px;"><span id="t-kosten"><br>
-      </span></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top; width: 463px;">Kosten pro fahrt<br>
-            </td>
-            <td style="vertical-align: top; width: 157px;"><span id="f-kosten"><br>
-      </span></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top; width: 463px;">Benzin verbrauch
-                auf 100 km<br>
-            </td>
-            <td style="vertical-align: top; width: 157px;"><span id="verbrauch"><br>
-      </span></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top; width: 463px;">Benzin verbrauch
-                pro Fahrt<br>
-            </td>
-            <td style="vertical-align: top; width: 157px;"><span id="verbrauch-daily"><br>
-      </span></td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top; width: 463px;">Tage bis zum
-                n&auml;chsten Tanken ( geschätzt; i.d.R weniger)<br>
-            </td>
-            <td style="vertical-align: top; width: 157px;"><span id="fahrten"><br>
-      </span></td>
-        </tr>
-        </tbody>
-    </table>
-    <span style="font-size:smaller;">Diese App verwendet das <em>
-        <a class="ui-link" href="http://nativedroid.godesign.ch/" data-ajax="false" target="_blank">nativeDroid-Theme
-            von Raphael Wildhaber</a></em> für das Android Holo Design.</span>
-
-    <div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b'>
-        <div data-role="navbar">
-            <button data-role="button" style="position: relative;" id="btn-submit">Berechnen</button>
+                        <div class="item-inner">
+                            <div class="item-title">Meilen</div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div id="settingsPane" data-role="panel" data-display="push" data-theme="b">
-        Eingabe in :
-        <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
-            <input type="radio" name="rad-in-unit" id="rad-in-unit-0" value="0" checked><label
-                for="rad-in-unit-0">KM</label>
-            <input type="radio" name="rad-in-unit" id="rad-in-unit-1" value="1"><label for="rad-in-unit-1">Meilen</label>
-        </fieldset>
-        <br>
-        Ausgabe in :
-        <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
-            <input type="radio" name="rad-out-unit" id="rad-out-unit-0" value="0" checked><label
-                for="rad-out-unit-0">KM</label>
-            <input type="radio" name="rad-out-unit" id="rad-out-unit-1" value="1"><label for="rad-out-unit-1">Meilen</label>
-        </fieldset>
-        <br>
+        <div class="list-block">
+            <div class="content-block-title">Ausgabe in :</div>
+            <ul>
+                <li>
+                    <label class="label-radio item-content">
+                        <input name="rad-out-unit" id="rad-out-unit-0" value="0" checked="checked" type="radio">
+
+                        <div class="item-inner">
+                            <div class="item-title">
+                                <div class="item-title">KM</div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label class="label-radio item-content">
+                        <input name="rad-out-unit" id="rad-out-unit-1" value="1" type="radio">
+
+                        <div class="item-inner">
+                            <div class="item-title">Meilen</div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </div>
+<div class="views">
+    <div class="view view-main">
+        <div class="navbar" data-role="header" data-position="fixed" data-tap-toggle="true" data-theme="b">
+            <div class="navbar-inner">
+                <div class="center sliding">Benzinrechner</div>
+                <!--<div class="right"><br/></div>-->
+                <div class="right">
+                    <!-- Right link contains only icon - additional "icon-only" class-->
+                    <a href="#" class="link icon-only open-panel">
+                        <i class="icon icon-bars"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+            <div data-page="index" class="page">
+                <div class="page-content">
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Preis</div>
+                                        <div class="item-input">
+                                            <input class="numpad" id="price" type="numpad" placeholder="in €">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Nachgetankt</div>
+                                        <div class="item-input">
+                                            <input class="numpad" id="tank-menge" type="numpad" placeholder="in l">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Strecke</div>
+                                        <div class="item-input">
+                                            <input class="numpad" id="strecke" type="numpad" placeholder="seit Tanken">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Tankgröße</div>
+                                        <div class="item-input">
+                                            <input class="numpad" id="tank-size" type="numpad" placeholder="in l">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">tgl. Strecke</div>
+                                        <div class="item-input">
+                                            <input class="numpad" id="daily" type="numpad" placeholder="Täglich">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+                        <tbody>
+                        <tr>
+                            <td style="width: 70%;">Kosten aktuelle
+                                Tankfüllung<br>
+                            </td>
+                            <td style="width: 30%;">
+                                <span id="t-kosten"><br></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 70%;">Kosten pro fahrt<br>
+                            </td>
+                            <td style="width: 30%;">
+                                <span id="f-kosten"><br></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 70%;">Benzin verbrauch
+                                auf 100 km<br>
+                            </td>
+                            <td style="width: 30%;">
+                                <span id="verbrauch"><br></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 70%;">Benzin verbrauch
+                                pro Fahrt<br>
+                            </td>
+                            <td style="width: 30%;">
+                                <span id="verbrauch-daily"><br></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 70%;">Tage bis zum
+                                nächsten Tanken ( geschätzt; i.d.R weniger)<br>
+                            </td>
+                            <td style="width: 30%;">
+                                <span id="fahrten"><br></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="toolbar" data-position="fixed" data-role="footer" data-tap-toggle="false" data-theme="b">
+            <div class="toolbar-inner" data-role="navbar">
+                <a href="#" data-role="button" style="position: relative;" id="btn-submit">Berechnen</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="f7/js/framework7.min.js"></script>
+<script src="js/framework7.keypad.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="f7/js/my-app.js"></script>
 </body>
 </html>
