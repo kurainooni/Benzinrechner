@@ -1,0 +1,25 @@
+{
+  "start_url": "http://kurainooni.github.io/Benzinrechner",
+  "short_name": "Benzinrechner",
+  "icons": [
+    {
+      "src": "http://kurainooni.github.io/Benzinrechner/icon_70.png",
+      "sizes": "70x70"
+    },
+    {
+      "src": "http://kurainooni.github.io/Benzinrechner/icon_150.png",
+      "sizes": "150x150"
+    },
+    {
+      "src": "http://kurainooni.github.io/Benzinrechner/icon_150_wide.png",
+      "sizes": "310x150"
+    },
+    {
+      "src": "http://kurainooni.github.io/Benzinrechner/icon_310.png",
+      "sizes": "310x310"
+    }
+  ],
+  "display": "fullscreen",
+  "orientation": "any",
+  "name": "Benzinrechner"
+}
